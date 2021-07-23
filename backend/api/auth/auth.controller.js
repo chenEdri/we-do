@@ -13,9 +13,10 @@ async function login(req, res) {
 }
 
 async function signup(req, res) {
+    const { fullName, email, password } = req.body
     try {
-        const { name , password, email } = req.query
-        await authService.signup(name,password,email );
+        await authService.signup(fullName, email, password );
+        res.end()
     } catch (err) {
         res.status(500).send({ error: 'could not signup, please try later' })
     }

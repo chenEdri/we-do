@@ -4,14 +4,24 @@ const utilService = require('../../services/util.service');
 
 module.exports = {
     getAccount,
+    getById,
     addAccount,
     removeAccount,
     updateAccount
 }
 
-async function getAccount(req, res) {
-    const {id} = req.query;
-    let account = await accountControllerService.getById(id);
+
+async function getAccount(req, res){
+    console.log('getAccount');
+    let {userId} = req.query;
+    let account = await accountService.getByUserId(userId);
+    logger.debug(account, 'account_controller', 'GET');
+    res.send(account);
+}
+
+async function getById(req, res) {
+    console.log('getById');
+    let account = await accountService.getById(req.params.id);
     logger.debug(account, 'account_controller', 'GET');
     res.send(account);
 }

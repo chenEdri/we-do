@@ -67,7 +67,7 @@ async function remove(userId) {
 async function update(userId, user) {
     console.log(user.fullName);
     let okPacket;
-    let query = `UPDATE user SET full_name ="${user.fullName}",
+    let query = `UPDATE user SET fullName ="${user.fullName}",
                                     email = "${user.email}",
                                     password="${user.password}"
                                     WHERE user.id=${userId}`;
@@ -80,9 +80,9 @@ async function update(userId, user) {
     }
 }
 
-async function add(name, password, email) {
+async function add(fullName, email, password) {
     let res;
-    var query = `INSERT INTO user(full_name, email, password) VALUES("${name}","${email}","${password}")`;
+    var query = `INSERT INTO user(fullName, email, password) VALUES("${fullName}","${email}","${password}")`;
     return dbService.runSQL(query)
 }
 
