@@ -3,14 +3,14 @@ const logger = require('../../services/logger.service');
 const utilService = require('../../services/util.service');
 
 module.exports={
-    getBudget,
+    getBudgetByAccount,
     getBudgetById,
     addBudget,
     removeBudget,
     updateBudget
 }
 
-async function getBudget(req, res){
+async function getBudgetByAccount(req, res){
     const {accountId} = req.query;
     const budgets = await budgetService.query(accountId);
     logger.debug(budgets);
@@ -32,7 +32,9 @@ async function addBudget(req,res){
 async function updateBudget(req, res){
     const budgetId= req.params.id;
     const budget = req.body;
-    if(budget.id !== budgetId) return;
+    console.log('here',budgetId );
+    console.log('here2',budget.id );
+    if(budget.id.toString() !== budgetId.toString()) return;
     let updateStat = await budgetService.updateBudget(budget);
     (updateStat.affectedRows !== 0)? res.send(budget): res.send(updateStat);
 }

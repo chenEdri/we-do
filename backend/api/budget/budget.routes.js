@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const {requireAuth} = require('../../middlewares/requireAuth.middleware')
-const {getBudget, addBudget, removeBudget, updateBudget} = require('./budget.controller');
+const {getBudgetByAccount, getBudgetById, addBudget, removeBudget, updateBudget} = require('./budget.controller');
 
-
-router.get('/:id', getBudget);
+router.get('/', getBudgetByAccount)
+router.get('/:id', getBudgetById);
 router.post('/', addBudget);
 router.put('/:id', updateBudget);
 router.delete('/:id', requireAuth, removeBudget);

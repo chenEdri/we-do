@@ -19,3 +19,25 @@ Fri, 23 Jul 2021 09:22:04 GMT - Debug - undefined
 Fri, 23 Jul 2021 09:24:01 GMT - Debug - undefined
 Fri, 23 Jul 2021 09:24:15 GMT - Debug - undefined
 Fri, 23 Jul 2021 09:26:46 GMT - Debug - [{"id":14,"accountName":"maya&chen","weedingDate":"2021-06-30T17:00:53.000Z","brideName":"Maya","groomName":"Chen"}]
+Fri, 23 Jul 2021 09:58:11 GMT - Debug - []
+Fri, 23 Jul 2021 09:58:52 GMT - Debug - [{"id":1,"accountId":14,"totalBudget":150000,"totalExpences":0,"isOverBudget":0}]
+Fri, 23 Jul 2021 10:38:47 GMT - Debug - undefined
+Fri, 23 Jul 2021 10:39:09 GMT - Debug - undefined
+Fri, 23 Jul 2021 10:39:31 GMT - Debug - undefined
+Fri, 23 Jul 2021 10:39:46 GMT - Debug - [{"id":1,"accountId":14,"totalBudget":150000,"totalExpences":0,"isOverBudget":0}]
+Fri, 23 Jul 2021 10:39:59 GMT - Debug - [{"id":1,"accountId":14,"totalBudget":150000,"totalExpences":0,"isOverBudget":0}]
+Fri, 23 Jul 2021 14:06:21 GMT - Debug - [{"id":1,"budgetId":1,"title":"Hanachala","category":"Venue","totalAmount":90000,"depAmount":10000,"depDate":"2021-03-29T21:00:00.000Z","finalPaymentDate":"2021-06-29T21:00:00.000Z","note":"","paymentOption":"check"}]
+Fri, 23 Jul 2021 14:10:04 GMT - Debug - undefined
+Fri, 23 Jul 2021 14:10:13 GMT - Debug - [{"id":1,"budgetId":1,"title":"Hanachala","category":"Venue","totalAmount":90000,"depAmount":10000,"depDate":"2021-03-29T21:00:00.000Z","finalPaymentDate":"2021-06-29T21:00:00.000Z","note":"","paymentOption":"check"},{"id":2,"budgetId":1,"title":"Calyente music","category":"DJ","totalAmount":4300,"depAmount":null,"depDate":null,"finalPaymentDate":"2021-06-29T21:00:00.000Z","note":"","paymentOption":"Bank transfer"},{"id":3,"budgetId":1,"title":"wedding dress","category":"Clothing","totalAmount":3700,"depAmount":1000,"depDate":"2021-05-31T21:00:00.000Z","finalPaymentDate":"2021-06-29T21:00:00.000Z","note":"wedding dress for maya. withoud taking care of sma","paymentOption":"Bank transfer"}]
+Fri, 23 Jul 2021 14:10:19 GMT - Debug - undefined
+Fri, 23 Jul 2021 14:10:57 GMT - Debug - undefined
+Fri, 23 Jul 2021 14:12:11 GMT - Debug - [{"id":1,"budgetId":1,"title":"Hanachala","category":"Venue","totalAmount":90000,"depAmount":10000,"depDate":"2021-03-29T21:00:00.000Z","finalPaymentDate":"2021-06-29T21:00:00.000Z","note":"","paymentOption":"check"}]
+Fri, 23 Jul 2021 14:12:29 GMT - Debug - [{"id":1,"budgetId":1,"title":"Hanachala","category":"Venue","totalAmount":90000,"depAmount":10000,"depDate":"2021-03-29T21:00:00.000Z","finalPaymentDate":"2021-06-29T21:00:00.000Z","note":"","paymentOption":"check"}]
+Fri, 23 Jul 2021 15:18:45 GMT - Debug - undefined
+Fri, 23 Jul 2021 15:19:31 GMT - Debug - undefined
+Fri, 23 Jul 2021 15:19:52 GMT - Debug - [{"id":1,"accountId":14,"title":"Save the d","desription":"send rsvp to your guest list","category":"Invetations","personIncharge":"the bride","finalDate":"2021-04-19T21:00:00.000Z","isDone":1,"isLate":0}]
+Fri, 23 Jul 2021 15:27:22 GMT - Debug - [{"id":1,"accountId":14,"title":"Save the d","desription":"send rsvp to your guest list","category":"Invetations","personIncharge":"the bride","finalDate":"2021-04-19T21:00:00.000Z","isDone":1,"isLate":0}]
+Fri, 23 Jul 2021 15:27:49 GMT - Debug - []
+Fri, 23 Jul 2021 15:27:59 GMT - Debug - []
+Fri, 23 Jul 2021 15:28:03 GMT - Debug - [{"id":1,"accountId":14,"title":"Save the d","desription":"send rsvp to your guest list","category":"Invetations","personIncharge":"the bride","finalDate":"2021-04-19T21:00:00.000Z","isDone":1,"isLate":0}]
+Fri, 23 Jul 2021 15:29:42 GMT - Debug - [{"id":1,"accountId":14,"title":"Save the d","desription":"send rsvp to your guest list","category":"Invetations","personIncharge":"the bride","finalDate":"2021-04-19T21:00:00.000Z","isDone":1,"isLate":0}]

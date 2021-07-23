@@ -25,7 +25,7 @@ module.exports = {
 async function getByUserId(id) {
     let account;
     let result;
-    const query = `SELECT accountId FROM accountmanager WHERE userId=${id}`;
+    const query = `SELECT accountId FROM account_controller WHERE userId=${id}`;
     try {
         result = await dbService.runSQL(query);
         account = await dbService.runSQL(`SELECT * FROM account WHERE id= ${result[0].accountId}`);
@@ -63,7 +63,7 @@ async function addAccount(account) {
     try {
         okPacket = await dbService.runSQL(query);
         console.log(okPacket.insertId);
-        await dbService.runSQL(`INSERT INTO accountmanager(accountId,userId) VALUES(${okPacket.insertId},${account.userId})`);
+        await dbService.runSQL(`INSERT INTO account_controller(accountId,userId) VALUES(${okPacket.insertId},${account.userId})`);
     }
     catch {
         console.log('Eror with adding new account');

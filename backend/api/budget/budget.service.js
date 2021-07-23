@@ -9,17 +9,13 @@ module.exports = {
     updateTotalExpences,
     removeBudget
 }
-
+// const query2 = (condition)? `SELECT * from budgetList WHERE budgetList.budgetId=${budgetId} ${condition}`:`SELECT * from budgetList WHERE budgetList.budgetId=${budgetId}`;
 
 async function query(accountId) {
-    const condition = (filterBy)? _buildCriteria(): null;
-    let budgetId;
-    const query1 = `SELECT id from budget WHERE budget.accountId=${accountId}`;
-    const query2 = (condition)? `SELECT * from budgetList WHERE budgetList.budgetId=${budgetId} ${condition}`:`SELECT * from budgetList WHERE budgetList.budgetId=${budgetId}`;
+    const query = `SELECT * from budget WHERE accountId=${accountId}`;
     let budgets;
     try {
-        budgetId = await dbService.runSQL(query1)
-        budgets = await dbService.runSQL(query2)
+        budgets = await dbService.runSQL(query)
         return budgets;
     }
     catch (err) {
@@ -40,7 +36,11 @@ async function getById(budgetId) {
 }
 
 async function addBudget(budget) {
-    const query = `INSERT INTO budget(totalBudget, totalExpences, isOverBudget) VALUES(${budget.totalBudget},${budget.totalExpences},${budget.isOverBudget})`;
+    const query = `INSERT INTO budget(accountId, totalBudget, totalExpences, isOverBudget) VALUES(
+        ${budget.accountId},
+        ${budget.totalBudget},
+        ${budget.totalExpences},
+        ${budget.isOverBudget})`;
     return dbService.runSQL(query);
 }
 
@@ -78,13 +78,3 @@ async function removeBudget(budgetId, ) {
     }
 }
 
-//internal use functions:
-
-function _buildCriteria(filterBy) {
-    let creteria ='';
-    if (filterBy.title) creteria =`AND budgetItem.title="${filterBy.title}"`;
-    if (filterBy.categoryId) creteria +=`AND budgetItem.categoryId=${filterBy.categoryId}`;
-    if (filterBy.amount) creteria +=`AND budgetItem.amount=${filterBy.amount}`;
-    if (filterBy.paymentOption) creteria +=`AND budgetItem.paymentOption=${filterBy.paymentOption}`;
-    return creteria;
-}
