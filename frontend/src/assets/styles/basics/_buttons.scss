@@ -1,11 +1,11 @@
 .classic-btn{
-    padding: 10px 15px 10px 15px ;
+    padding: 7px 14px 7px 14px ;
     margin: 10px;
-    border-radius: 8px;
+    border-radius: 6px;
     background-color: rgb(236, 233, 233);
     color:#222222;
     border:1px solid #222222;
-    font-family: montserrat;
+    font-family: montserratR;
     cursor: pointer;
     width: fit-content !important;
     transition: 0.5s;
@@ -18,26 +18,29 @@
 }
 
 .warning-btn{
-    padding: 10px 15px 10px 15px ;
+    padding: 7px 12px 7px 12px ;
     margin: 10px;
-    border-radius: 8px;
-    background-color: rgba(224, 24, 24, 0.836);
+    border-radius: 6px;
+    background-color: rgba(226, 50, 50, 0.836);
     color:#000000;
     border:1px solid #222222;
-    font-family: montserrat;
+    font-family: montserratR;
     font-weight: 600;
     width: fit-content !important;
     cursor: pointer;
+    &:hover{
+        background-color: rgba(224, 24, 24, 0.836);
+    }
 }
 
 .light-btn{
     padding: 10px 15px 10px 15px ;
     margin: 10px;
-    border-radius: 8px;
+    border-radius: 6px;
     background-color: rgba(85, 184, 184, 0.884);
     color:#fff;
     border:1px solid #fff;
-    font-family: montserrat;
+    font-family: montserratR;
     cursor: pointer;
     width: fit-content !important;
     transition: 0.5s;

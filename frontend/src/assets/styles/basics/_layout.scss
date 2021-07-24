@@ -30,8 +30,34 @@
     }
 }
 
+
+.fullscreen-container{
+    display: grid;
+    min-height: 25vh;
+    grid-template-columns: 5px 1fr 5px;
+    margin-top: 80px;
+
+    > * {
+        grid-column: 2;
+
+        &.full {
+            grid-column: 1 /-1;
+        }
+    }
+}
+
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 20px;
+  
+    @include for-narrow-layout {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    @include for-normal-layout {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    @include for-wide-layout {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
 }

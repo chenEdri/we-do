@@ -1,16 +1,46 @@
+.footer-container{
+    align-self: flex-end;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    min-height: 25vh;
+    // margin-top: 5px;
+    background-color: $mid-blue;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+
 .foot-col{
+    z-index: 7;
+    color:white;
     font-display: flex;
     flex-direction: column;
     justify-content: center;
     margin-top: 30px;
+    .icon:hover{
+        color:black
+    }
 }
 
 .foot-col p {
     display: block;
-    font-size: 12px;
+    font-size: 15px;
+    color:white;
+    &:hover:not(:first-child){
+        color:black;
+    }
+}
+.foot-a{
+    display: block;
+    color:white;
+    margin-bottom: 5px;
+    &:hover{
+        color:black;
+    }
 }
 
 .foot-col .bold {
     font-weight: 900;
-    color: #62cb66;
+    color: white;
+}
+
 }

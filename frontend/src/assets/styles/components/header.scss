@@ -1,9 +1,10 @@
 .main-header {
+    color:$w;
     margin-left: auto;
     margin-right: auto;
     height: 80px;
     text-align: center;
-    background-color:#ccc;
+    background-color:$mid-blue;
 
     &>*{
         display: flex;

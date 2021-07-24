@@ -1,16 +1,16 @@
 // Setup
-@import "setup/variables.scss";
-@import "setup/functions.scss";
-@import "setup/mixins.scss";
-@import "setup/typography.scss";
+@import "setup/_variables.scss";
+@import "setup/_functions.scss";
+@import "setup/_mixins.scss";
+@import "setup/_typography.scss";
 
 // Basics
-@import "basics/form.scss";
-@import "basics/helpers.scss";
-@import "basics/layout.scss";
-@import "basics/base.scss";
-@import "basics/links.scss";
-@import "basics/buttons.scss";
+@import "basics/_form.scss";
+@import "basics/_helpers.scss";
+@import "basics/_layout.scss";
+@import "basics/_base.scss";
+@import "basics/_links.scss";
+@import "basics/_buttons.scss";
 
 // Components
 @import "components/footer.scss";
