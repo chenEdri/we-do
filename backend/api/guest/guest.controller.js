@@ -11,8 +11,7 @@ module.exports={
 }
 
 async function getGuests(req,res) {
-    const {accountId} = req.query.accountId;
-    const guests = await guestService.query(accountId, req.query);
+    const guests = await guestService.query(req.query);
     logger.debug(guests);
     res.send(guests);
 }
@@ -33,7 +32,7 @@ async function addGuest(req,res){
 async function updateGuest(req, res){
     const guestId= req.params.id;
     const guest = req.body;
-    if(guest.id !== guestId) return;
+    if(guest.id.toString() !== guestId.toString()) return;
     let updateStat = await guestService.updateGuest(guest);
     (updateStat.affectedRows !== 0)? res.send(guest): res.send(updateStat);
 }

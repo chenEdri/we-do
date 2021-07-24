@@ -2,10 +2,6 @@ const todoService = require('./todoList.service');
 const logger = require('../../services/logger.service');
 const utilService = require('../../services/util.service');
 
-// default option to add by user chios:
-
-const DEF_TODOS = `()`;
-
 module.exports={
     getTodos,
     getTodoById,
@@ -34,7 +30,7 @@ async function addTodo(req,res){
 }
 
 async function addDefaultTodos(req,res){
-    await todoService.addTodo(DEF_TODOS);
+    await todoService.addDefaultTodos(req.query.accountId);
     res.end();
 }
 

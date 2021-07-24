@@ -53,11 +53,11 @@ async function addAccount(account) {
     let okPacket;
     const query = `INSERT INTO account(
         accountName,
-        weedingDate,
+        weddingDate,
         brideName,
          groomName) VALUES(
         "${account.accountName}",
-        ${account.weedingDate},
+        ${account.weddingDate},
         "${account.brideName}",
         "${account.groomName}")`;
     try {
@@ -74,7 +74,7 @@ async function addAccount(account) {
 async function updateAccount(id, account) {
     let okPacket;
     const query = `UPDATE account SET accountName = "${account.accountName}",
-        weedingDate = "${account.weedingDate}",
+        weddingDate = "${account.weddingDate}",
         brideName = "${account.brideName}",
         groomName = "${account.groomName}"
         WHERE id = ${id}`;

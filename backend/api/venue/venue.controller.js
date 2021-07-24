@@ -14,25 +14,29 @@ async function getVenue(req, res) {
 }
 
 async function addVenue(req,res){
-    const budget = req.body
-    await budgetService.add(budget);
+    const venue = req.body
+    await venueService.add(venue);
     res.end();
 }
 
 async function updateVenue(req, res) {
+    let updateStat;
     const venueId = req.params.id;
     const venue = req.body;
-    let updateStat = await venueService.update(venueId, venue)
-    res.send(updateStat, venue)
+    if(venue.id.toString() !== venueId) return;
+    updateStat = await venueService.update(venue);
+    (updateStat.affectedRows !== 0)? res.send(venue): res.send(updateStat);
 }
 
 async function deleteVenue(req, res) {
     await venueService.remove(req.params.id)
     res.end()
 }
+
 module.exports = {
     getVenue,
     getVenues,
-    deleteVenue,
-    updateVenue
+    addVenue,
+    updateVenue,
+    deleteVenue
 }

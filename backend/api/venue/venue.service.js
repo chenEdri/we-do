@@ -36,6 +36,21 @@ async function getById(venueId) {
     }
 }
 
+async function getByName(venueName) {
+    let res;
+    var query = `SELECT * FROM venue WHERE venue.naem = ${venueName}`;
+    try {
+        res = dbService.runSQL(query);
+    }
+    catch (err) {
+        console.log('ERROR FINDING USER WITH THIS ID');
+        throw err;
+    }
+    finally {
+        return res;
+    }
+}
+
 
 async function remove(venueId) {
     let query = `DELETE FROM venue WHERE venue.id = ${venueId}`;
@@ -48,22 +63,26 @@ async function remove(venueId) {
 }
 
 async function add(venue) {
-    let res;
-    var query = `INSERT INTO venue(name, coordinate, imgUrl) VALUES("${venue.name}","${venue.coordinate}","${venue.imgUrl}")`;
-    return dbService.runSQL(query)
+    var query = `INSERT INTO venue(accountId, name, coordinate, imgUrl) VALUES(${venue.accountId}, "${venue.name}",(POINT(${venue.coordinate[0]},${venue.coordinate[1]})),"${venue.imgUrl}")`;
+    try {
+        dbService.runSQL(query);
+        res.end()
+    } catch {
+        console.log('error inserting new venue to the table');
+    }
 }
 
 
-async function update(venueId, venue) {
-    console.log(venue.fullName);
+async function update(venue) {
     let okPacket;
-    let query = `UPDATE venue SET name ="${venue.name}",
-                                    coordinate = "${venue.coordinate}",
-                                    imgUrl="${venue.imgUrl}"
-                                    WHERE venue.id=${venueId}`;
+    let query = `UPDATE venue SET accountId=${venue.accountId},
+    name ="${venue.name}",
+    coordinate = (POINT(${venue.coordinate[0]},${venue.coordinate[1]})),
+    imgUrl="${venue.imgUrl}"
+        WHERE venue.id=${venue.id}`;
     try {
         okPacket = await dbService.runSQL(query);
-        if (okPacket.affectedRows !== 0) return okPacket;
+        return okPacket;
     }
     catch (err) {
         console.log('error with updating the account', err);
