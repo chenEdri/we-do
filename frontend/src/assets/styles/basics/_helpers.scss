@@ -1,0 +1,167 @@
+// Font Sizes
+.fs12 {
+  font-size: rem(12px);
+}
+.fs14 {
+  font-size: rem(14px);
+}
+.fs18 {
+  font-size: rem(18px);
+}
+.fs20 {
+  font-size: rem(20px);
+}
+.fs24 {
+  font-size: rem(24px);
+}
+.fs28 {
+  font-size: rem(28px);
+}
+.fs30 {
+  font-size: rem(30px);
+}
+
+//font weights
+.fw4 {
+  font-weight: 400;
+}
+
+.fw6 {
+  font-weight: 600;
+}
+
+//colors:
+.clr1 {
+  color: $clr1;
+}
+.clr2 {
+  color: $clr2;
+}
+.clr3 {
+  color: $clr3;
+}
+.clr4 {
+  color: $clr4;
+}
+.clr5 {
+  color: $clr5;
+}
+.clr6 {
+  color: $clr6;
+}
+.black {
+  color: #000000;
+}
+
+// flex helpers
+
+.flex {
+  display: flex;
+
+  > *.full {
+    flex: 1;
+  }
+  &.column {
+    flex-direction: column;
+  }
+  &.justify-center {
+    justify-content: center;
+  }
+  &.align-center {
+    align-items: center;
+  }
+  &.sb {
+    justify-content: space-between;
+  }
+  &.sa {
+    justify-content: space-around;
+  }
+  &.wrap {
+    flex-wrap: wrap;
+  }
+  &.no-wrap {
+    flex-wrap: nowrap;
+  }
+  &.end {
+    justify-self: flex-end;
+  }
+}
+
+//margin:
+.m0 {
+  margin: 0;
+}
+.m0a {
+  margin: 0 auto;
+}
+.m10 {
+  margin: rem(10px);
+}
+.mb50 {
+  margin-bottom: rem(50px);
+}
+.mb80 {
+  margin-bottom: rem(80px);
+}
+.ml15 {
+  margin-left: rem(15px);
+}
+.ml25 {
+  margin-left: rem(25px);
+}
+.mr15 {
+  margin-right: rem(15px);
+}
+.mr25 {
+  margin-right: rem(25px);
+}
+
+//padding
+
+.p0 {
+  padding: 0;
+}
+.p10 {
+  padding: rem(10px);
+}
+.pt10 {
+  padding-top: rem(10px);
+}
+.pr10 {
+  padding-right: rem(10px);
+}
+.pl10 {
+  padding-left: rem(10px);
+}
+.pb10 {
+  padding-bottom: rem(10px);
+}
+
+//others:
+
+.cp{cursor: pointer;}
+.tac{ text-align: center;}
+
+//border
+
+.brt{
+  border-top: 1px solid rgb(198, 198, 198);
+  margin-top: 5px;
+}
+.brb{
+  border-bottom: 1px solid rgb(198, 198, 198);
+  margin-bottom: 5px;
+}
+
+
+// Media helpers
+
+.square-ratio {
+  @include aspect-ratio(1, 1);
+}
+.video-ratio {
+  @include aspect-ratio(16, 9);
+}
+.portrait-ratio {
+  @include aspect-ratio(9, 16);
+}

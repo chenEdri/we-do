@@ -1,0 +1,30 @@
+.main-header {
+    margin-left: auto;
+    margin-right: auto;
+    height: 80px;
+    text-align: center;
+    background-color:#ccc;
+
+    &>*{
+        display: flex;
+    }
+}
+
+.left-nav{
+    width:50%;
+    
+    &>*{
+        margin-left: rem(20px);
+    }
+
+}
+
+.right-nav{
+    width: 30%;
+    justify-content: flex-end;
+
+    &>*{
+        margin-left: rem(10px);
+        margin-right: rem(10px);
+    }
+}

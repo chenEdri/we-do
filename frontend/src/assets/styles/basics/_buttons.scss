@@ -1,0 +1,49 @@
+.classic-btn{
+    padding: 10px 15px 10px 15px ;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: rgb(236, 233, 233);
+    color:#222222;
+    border:1px solid #222222;
+    font-family: montserrat;
+    cursor: pointer;
+    width: fit-content !important;
+    transition: 0.5s;
+
+    &:hover{
+        background-color: $clr3;
+        color:rgb(236, 233, 233);
+        border:1px solid rgb(236, 233, 233);
+    }
+}
+
+.warning-btn{
+    padding: 10px 15px 10px 15px ;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: rgba(224, 24, 24, 0.836);
+    color:#000000;
+    border:1px solid #222222;
+    font-family: montserrat;
+    font-weight: 600;
+    width: fit-content !important;
+    cursor: pointer;
+}
+
+.light-btn{
+    padding: 10px 15px 10px 15px ;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: rgba(85, 184, 184, 0.884);
+    color:#fff;
+    border:1px solid #fff;
+    font-family: montserrat;
+    cursor: pointer;
+    width: fit-content !important;
+    transition: 0.5s;
+
+    &:hover{
+        background-color: rgba(84, 170, 170, 0.829);
+        
+    }
+}
